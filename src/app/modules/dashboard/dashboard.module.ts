@@ -2,10 +2,11 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
+import { FlashMessagesModule } from 'angular2-flash-messages';
 
 // components
 import { DashboardHomeComponent, DashboardNotificationBarComponent, DashboardNavbarComponent,
-         DashboardViewComponent, DashboardLoginComponent} from './components/dashboard-components-barrel'
+         DashboardViewComponent, DashboardLoginComponent} from './components/dashboard-components-barrel';
 
 //  routes
 import { DashboardRoutes } from './dashboard.routes';
@@ -25,6 +26,7 @@ import { ApiService } from './services/api.service';
     BrowserModule,
     FormsModule,
     HttpModule,
+    FlashMessagesModule,
     DashboardRoutes,
   ],
   providers: [ApiService],

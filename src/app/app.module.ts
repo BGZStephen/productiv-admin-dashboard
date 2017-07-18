@@ -3,8 +3,11 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
+// services
+import { NotificationService } from './helpers/notification.service';
+
 // modules
-import { DashboardModule } from './modules/dashboard/dashboard.module'
+import { DashboardModule } from './modules/dashboard/dashboard.module';
 
 // Routes
 import { AppRoutes } from './app.routes';
@@ -23,7 +26,7 @@ import { AppComponent } from './app.component';
     AppRoutes,
     DashboardModule,
   ],
-  providers: [],
+  providers: [NotificationService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

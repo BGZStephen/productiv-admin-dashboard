@@ -12,9 +12,9 @@ export class ApiService {
   ) { }
 
   login(userObject) {
-    let headers = new Headers()
-    headers.append('Authorization', `${environment.adminAuthToken}`)
-    return this.http.post(`${this.apiUrl}/users/authenticate`, userObject, {headers: headers})
+    const headers = new Headers();
+    headers.append('Authorization', `${environment.adminAuthToken}`);
+    return this.http.post(`${this.apiUrl}/users/authenticate`, userObject, {headers: headers});
   }
 
 

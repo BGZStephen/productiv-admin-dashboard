@@ -1,6 +1,8 @@
 @import '../../sass/_variables';
 
 .main-container {
+  display: flex;
+  justify-content: center;
   width: 100%
 }
 
@@ -14,6 +16,7 @@
   justify-content: center;
   min-height: 100vh;
   padding: 0 10px;
+  width: 100%;
 }
 
 .login-header {
@@ -68,4 +71,9 @@
   @media(min-width: 768px) {
     font-size: 1.4em;
   }
+}
+
+.flash-messages-container {
+  position: absolute;
+  bottom: 10px;
 }

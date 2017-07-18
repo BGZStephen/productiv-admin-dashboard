@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ApiService } from '../../services/api.service';
+import { FlashMessagesService } from 'angular2-flash-messages';
+import { NotificationService } from '../../../../helpers/notification.service';
 
 @Component({
   selector: 'app-dashboard-login',
@@ -10,6 +12,8 @@ export class DashboardLoginComponent implements OnInit {
 
   constructor(
     private apiService: ApiService,
+    private flashMessagesService: FlashMessagesService,
+    private notificationService: NotificationService,
   ) { }
 
   ngOnInit() {
@@ -18,11 +22,11 @@ export class DashboardLoginComponent implements OnInit {
   login(userObject) {
     this.apiService.login(userObject)
     .subscribe(res => {
-      console.log(res)
+      this.notificationService.flashSuccess('Login successful');
     },
     error => {
-      console.log(error)
-    })
+      this.notificationService.flashError('Login failed');
+    });
   }
 
 }
