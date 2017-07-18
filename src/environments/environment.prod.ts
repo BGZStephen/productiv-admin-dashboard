@@ -1,3 +1,5 @@
 export const environment = {
-  production: true
+  adminAuthToken: "dFZaGMDEx6Z7",
+  productivApiUrl: "http://localhost:3000",
+  production: true,
 };
