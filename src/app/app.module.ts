@@ -6,6 +6,9 @@ import { HttpModule } from '@angular/http';
 // modules
 import { DashboardModule } from './modules/dashboard/dashboard.module'
 
+// Routes
+import { AppRoutes } from './app.routes';
+
 // components
 import { AppComponent } from './app.component';
 
@@ -17,6 +20,8 @@ import { AppComponent } from './app.component';
     BrowserModule,
     FormsModule,
     HttpModule,
+    AppRoutes,
+    DashboardModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -5,7 +5,7 @@ import { HttpModule } from '@angular/http';
 
 // components
 import { DashboardHomeComponent, DashboardNotificationBarComponent, DashboardNavbarComponent,
-         DashboardViewComponent} from './components/dashboard-components-barrel'
+         DashboardViewComponent, DashboardLoginComponent} from './components/dashboard-components-barrel'
 
 //  routes
 import { DashboardRoutes } from './dashboard.routes'
@@ -16,6 +16,7 @@ import { DashboardRoutes } from './dashboard.routes'
     DashboardNotificationBarComponent,
     DashboardNavbarComponent,
     DashboardViewComponent,
+    DashboardLoginComponent,
   ],
   imports: [
     BrowserModule,

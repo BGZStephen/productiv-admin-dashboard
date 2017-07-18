@@ -4,9 +4,9 @@ import { DashboardViewComponent, DashboardHomeComponent, DashboardNavbarComponen
          DashboardNotificationBarComponent} from './components/dashboard-components-barrel'
 
 const DASHBOARD_ROUTES: Routes = [
-  {path: '', redirectTo: 'home', pathMatch: 'full'},
-  {path: 'home', component: DashboardViewComponent},
-  {path: 'home', component: DashboardHomeComponent, outlet: 'dashboardOutlet'},
+  {path: 'dashboard', component: DashboardViewComponent, children: [
+    {path: '', component: DashboardHomeComponent, outlet: 'dashboardOutlet'},
+  ]},
 ]
 
 export const DashboardRoutes = RouterModule.forChild(DASHBOARD_ROUTES)
