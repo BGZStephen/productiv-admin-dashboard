@@ -8,7 +8,10 @@ import { DashboardHomeComponent, DashboardNotificationBarComponent, DashboardNav
          DashboardViewComponent, DashboardLoginComponent} from './components/dashboard-components-barrel'
 
 //  routes
-import { DashboardRoutes } from './dashboard.routes'
+import { DashboardRoutes } from './dashboard.routes';
+
+// services
+import { ApiService } from './services/api.service';
 
 @NgModule({
   declarations: [
@@ -24,6 +27,6 @@ import { DashboardRoutes } from './dashboard.routes'
     HttpModule,
     DashboardRoutes,
   ],
-  providers: [],
+  providers: [ApiService],
 })
 export class DashboardModule { }

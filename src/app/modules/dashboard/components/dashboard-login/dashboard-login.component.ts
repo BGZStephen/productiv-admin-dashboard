@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ApiService } from '../../services/api.service';
 
 @Component({
   selector: 'app-dashboard-login',
@@ -7,9 +8,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DashboardLoginComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private apiService: ApiService,
+  ) { }
 
   ngOnInit() {
+  }
+
+  login(userObject) {
+    this.apiService.login(userObject)
+    .subscribe(res => {
+      console.log(res)
+    },
+    error => {
+      console.log(error)
+    })
   }
 
 }
