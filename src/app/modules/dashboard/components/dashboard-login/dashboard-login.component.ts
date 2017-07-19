@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ApiService } from '../../services/api.service';
 import { FlashMessagesService } from 'angular2-flash-messages';
-import { NotificationService } from '../../../../helpers/notification.service';
+import { NotificationService } from '../../../../services/helpers/notification.service';
 
 @Component({
   selector: 'app-dashboard-login',

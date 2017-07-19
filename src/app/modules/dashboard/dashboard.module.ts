@@ -6,9 +6,9 @@ import { FlashMessagesModule } from 'angular2-flash-messages';
 
 // modules
 import { UsersModule } from '../users/users.module'
+
 // components
-import { DashboardHomeComponent, DashboardNotificationBarComponent, DashboardNavbarComponent,
-         DashboardViewComponent, DashboardLoginComponent} from './components/dashboard-components-barrel';
+import { DashboardNavbarComponent, DashboardViewComponent, DashboardLoginComponent} from './components/dashboard-components-barrel';
 
 //  routes
 import { DashboardRoutes } from './dashboard.routes';
@@ -18,8 +18,6 @@ import { ApiService } from './services/api.service';
 
 @NgModule({
   declarations: [
-    DashboardHomeComponent,
-    DashboardNotificationBarComponent,
     DashboardNavbarComponent,
     DashboardViewComponent,
     DashboardLoginComponent,

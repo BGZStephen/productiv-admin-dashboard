@@ -1,11 +1,12 @@
 import { Routes, RouterModule } from '@angular/router';
 
-import { DashboardViewComponent, DashboardHomeComponent, DashboardNavbarComponent,
-         DashboardNotificationBarComponent} from './components/dashboard-components-barrel';
+// dashboard module components
+import { DashboardViewComponent, DashboardNavbarComponent } from './components/dashboard-components-barrel';
 
 const DASHBOARD_ROUTES: Routes = [
   {path: 'dashboard', component: DashboardViewComponent, children: [
-    {path: '', component: DashboardHomeComponent, outlet: 'dashboardOutlet'},
+    {path: '', redirectTo: 'users', pathMatch: 'full'},
+    {path: 'users', loadChildren: '../users/users.module#UsersModule'},
   ]},
 ];
 
