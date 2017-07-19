@@ -4,7 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 // services
-import { NotificationService } from './helpers/notification.service';
+import { NotificationService } from './services/helpers/notification.service';
 
 // modules
 import { DashboardModule } from './modules/dashboard/dashboard.module';
