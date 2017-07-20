@@ -6,6 +6,8 @@ import { FlashMessagesModule } from 'angular2-flash-messages';
 
 // modules
 import { UsersModule } from '../users/users.module'
+import { ModulesModule } from '../modules/modules.module'
+import { AnalyticsModule } from '../analytics/analytics.module'
 
 // components
 import { DashboardNavbarComponent, DashboardViewComponent, DashboardLoginComponent} from './components/dashboard-components-barrel';
@@ -29,6 +31,8 @@ import { ApiService } from './services/api.service';
     FlashMessagesModule,
     DashboardRoutes,
     UsersModule,
+    ModulesModule,
+    AnalyticsModule,
   ],
   providers: [ApiService],
 })
