@@ -10,6 +10,7 @@ export class UsersManageComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    console.log("loaded")
   }
 
 }
