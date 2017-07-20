@@ -28,26 +28,35 @@
   display: flex;
   flex-direction: column;
   list-style: none;
+  overflow: hidden;
   position: absolute;
   top: 50px;
+  transition: 0.3s ease all;
   width: 100%;
   @media(min-width: 1024px) {
     background: none;
     flex-direction: row;
     position: relative;
     top: 0;
+    transition: 0s ease all;
+    width: auto;
   }
 }
 
 .navbar-top-item-container {
   align-items: center;
-  border-radius: 5px;
   color: white;
   cursor: pointer;
   display: flex;
-  margin: 0 5px;
-  padding: 7px 10px;
+  height: 40px;
+  padding: 10px;
   transition: 0.3s ease all;
+  width: 100%;
+  @media(min-width: 1024px) {
+    padding: 7px 10px;
+    border-radius: 5px;
+    margin: 0 5px;
+  }
 }
 
 .navbar-top-item-container:hover {
