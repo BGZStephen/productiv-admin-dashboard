@@ -47,7 +47,7 @@ export class DashboardNavbarComponent implements OnInit {
 
   submenuStyle(index) {
     if(this.activeSubmenu == index) {
-      const height = document.getElementsByClassName('navbar-top-level-container')[index].getElementsByClassName('navbar-second-level')[0].children.length * 40 + 'px';
+      const height = document.getElementsByClassName('navbar-top-level-container')[index].getElementsByClassName('navbar-second-level')[0].children.length * 50 + 'px';
       return {'min-height': height, 'max-height': 'auto'};
     } else {
       return {'min-height': '0', 'max-height': '0'};
