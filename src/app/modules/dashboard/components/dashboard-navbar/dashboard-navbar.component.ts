@@ -9,6 +9,7 @@ export class DashboardNavbarComponent implements OnInit {
 
   constructor() { }
 
+  activeSubmenu: number = -1;
   navbarVisibility = false;
 
   ngOnInit() {
@@ -30,7 +31,23 @@ export class DashboardNavbarComponent implements OnInit {
     if (screen.width >= 1024) {
       return{'min-height': 'auto', 'max-height': '50px'};
     } else if (this.navbarVisibility) {
-      const height = document.getElementsByClassName('navbar-top-level')[0].children.length * 40 + 'px';
+      return {'max-height': 'calc(100vh - 50px)', 'visibiloty': '1', 'opacity': '1'};
+    } else {
+      return {'max-height': '0', 'visibiloty': '0', 'opacity': '0'};
+    }
+  }
+
+  setActiveSubmenu(index) {
+    if(this.activeSubmenu == index) {
+      this.activeSubmenu = -1;
+    } else {
+      this.activeSubmenu = index;
+    }
+  }
+
+  submenuStyle(index) {
+    if(this.activeSubmenu == index) {
+      const height = document.getElementsByClassName('navbar-top-level-container')[index].getElementsByClassName('navbar-second-level')[0].children.length * 40 + 'px';
       return {'min-height': height, 'max-height': 'auto'};
     } else {
       return {'min-height': '0', 'max-height': '0'};

@@ -4,13 +4,26 @@
       <h1 class="logo">Productiv</h1>
     </div>
     <ul class="navbar-top-level" (window:resize)="resizeNavbarVisibility()" [ngStyle]="navbarStyle()">
-      <div class="navbar-top-item-container">
-        <i class="fa fa-home"></i>
-        <li class="navbar-top-item">Home</li>
+      <div class="navbar-top-level-container">
+        <div class="navbar-top-level-content" (click)="setActiveSubmenu(0)">
+          <i class="fa fa-home"></i>
+          <li class="navbar-top-item">Home</li>
+        </div>
       </div>
-      <div class="navbar-top-item-container">
-        <i class="fa fa-user"></i>
-        <li class="navbar-top-item">Users</li>
+      <div class="navbar-top-level-container">
+        <div class="navbar-top-level-content" (click)="setActiveSubmenu(1)">
+          <i class="fa fa-user"></i>
+          <li class="navbar-top-item">Users</li>
+          <i class="fa fa-caret-down"></i>
+        </div>
+        <ul class="navbar-second-level" [ngStyle]="submenuStyle(1)">
+          <div class="navbar-second-level-container">
+            <div class="navbar-second-level-content">
+              <i class="fa fa-user"></i>
+              <li class="navbar-second-item">Users</li>
+            </div>
+          </div>
+        </ul>
       </div>
     </ul>
     <div class="actions-container">
