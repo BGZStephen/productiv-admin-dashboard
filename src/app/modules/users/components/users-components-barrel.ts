@@ -1,1 +1,1 @@
-export { UsersManageComponent } from './users-manage/users-manage.component'
+export { UsersManageComponent } from './users-manage/users-manage.component';

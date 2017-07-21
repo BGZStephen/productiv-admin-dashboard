@@ -5,9 +5,10 @@ import { HttpModule } from '@angular/http';
 import { FlashMessagesModule } from 'angular2-flash-messages';
 
 // modules
-import { UsersModule } from '../users/users.module'
-import { ModulesModule } from '../modules/modules.module'
-import { AnalyticsModule } from '../analytics/analytics.module'
+import { UsersModule } from '../users/users.module';
+import { ModulesModule } from '../modules/modules.module';
+import { AnalyticsModule } from '../analytics/analytics.module';
+import { BusinessesModule } from '../businesses/businesses.module';
 
 // components
 import { DashboardNavbarComponent, DashboardViewComponent, DashboardLoginComponent} from './components/dashboard-components-barrel';
@@ -33,6 +34,7 @@ import { ApiService } from './services/api.service';
     UsersModule,
     ModulesModule,
     AnalyticsModule,
+    BusinessesModule,
   ],
   providers: [ApiService],
 })

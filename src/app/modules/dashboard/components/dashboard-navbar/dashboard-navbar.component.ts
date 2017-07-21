@@ -16,7 +16,7 @@ export class DashboardNavbarComponent implements OnInit {
   }
 
   resizeNavbarVisibility() {
-    if(screen.width >= 1024) {
+    if (screen.width >= 1024) {
       this.navbarVisibility = true;
     } else {
       this.navbarVisibility = false;
@@ -38,7 +38,7 @@ export class DashboardNavbarComponent implements OnInit {
   }
 
   setActiveSubmenu(index) {
-    if(this.activeSubmenu == index) {
+    if (this.activeSubmenu === index) {
       this.activeSubmenu = -1;
     } else {
       this.activeSubmenu = index;
@@ -46,8 +46,9 @@ export class DashboardNavbarComponent implements OnInit {
   }
 
   submenuStyle(index) {
-    if(this.activeSubmenu == index) {
-      const height = document.getElementsByClassName('navbar-top-level-container')[index].getElementsByClassName('navbar-second-level')[0].children.length * 50 + 'px';
+    if (this.activeSubmenu === index) {
+      const height = document.getElementsByClassName('navbar-top-level-container')[index]
+                             .getElementsByClassName('navbar-second-level')[0].children.length * 50 + 'px';
       return {'min-height': height, 'max-height': 'auto'};
     } else {
       return {'min-height': '0', 'max-height': '0'};
