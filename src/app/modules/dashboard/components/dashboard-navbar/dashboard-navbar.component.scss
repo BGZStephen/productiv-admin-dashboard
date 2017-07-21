@@ -37,11 +37,53 @@
     background: none;
     flex-direction: row;
     overflow: visible;
+    padding: 0;
     position: relative;
     top: 0;
     transition: 0s ease all;
     width: auto;
   }
+}
+
+.navbar-top-level-container {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  position: relative;
+  @media(min-width: 1024px) {
+    overflow: visible;
+  }
+}
+
+.navbar-top-level-content {
+  align-items: center;
+  color: white;
+  cursor: pointer;
+  display: flex;
+  height: 50px;
+  padding: 0 10px;
+  transition: 0.3s ease all;
+  width: 100%;
+  > i {
+    width: 15px;
+  }
+  > .fa-caret-down {
+    margin-left: auto;
+    margin-right: 5px;
+    padding: 10px;
+  }
+  @media(min-width: 1024px) {
+    padding: 7px 15px;
+  }
+}
+
+.navbar-top-level-content:hover {
+  background: white;
+  color: black;
+}
+
+.navbar-top-item {
+  margin-left: 10px;
 }
 
 .navbar-second-level {
@@ -61,7 +103,6 @@
   }
 }
 
-.navbar-top-level-container,
 .navbar-second-level-container {
   display: flex;
   flex-direction: column;
@@ -69,61 +110,39 @@
   position: relative;
 }
 
-.navbar-top-level-container {
-  @media(min-width: 1024px) {
-    overflow: visible;
-  }
-}
-
-.navbar-top-level-content,
 .navbar-second-level-content {
   align-items: center;
   color: white;
   cursor: pointer;
   display: flex;
   height: 50px;
+  padding: 0 10px;
   transition: 0.3s ease all;
   width: 100%;
+  > i {
+    width: 15px;
+  }
+  &:hover {
+    background: white;
+    color: black;
+  }
   @media(min-width: 1024px) {
     padding: 7px 15px;
   }
 }
 
-.navbar-top-level-content:hover,
-.navbar-second-level-content:hover {
-  background: white;
-  color: black;
-}
-
-.navbar-top-level-content  > i,
-.navbar-second-level-content >i  {
-  width: 15px;
-}
-
-.navbar-top-level-content > .fa-caret-down {
-  margin-left: auto;
-  margin-right: 5px;
-  padding: 10px;
-}
-
-.navbar-top-item,
 .navbar-second-item {
   margin-left: 10px;
-}
-
-.navbar-second-level-content {
-  display: flex;
 }
 
 .actions-container {
   margin-left: auto;
   margin-right: 5px;
+  > i {
+    color: white;
+    padding: 10px;
+  }
   @media(min-width: 1024px) {
     display: none;
   }
-}
-
-.actions-container > i {
-  color: white;
-  padding: 10px;
 }
