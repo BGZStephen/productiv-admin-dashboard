@@ -5,6 +5,7 @@ import { HttpModule } from '@angular/http';
 
 // services
 import { NotificationService } from './services/helpers/notification.service';
+import { MenuBuilderService } from './services/helpers/menu-builder.service'
 
 // modules
 import { DashboardModule } from './modules/dashboard/dashboard.module';
@@ -26,7 +27,7 @@ import { AppComponent } from './app.component';
     AppRoutes,
     DashboardModule,
   ],
-  providers: [NotificationService],
+  providers: [NotificationService, MenuBuilderService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

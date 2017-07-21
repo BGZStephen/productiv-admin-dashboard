@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MenuBuilderService } from '../../../../services/helpers/menu-builder.service'
 
 @Component({
   selector: 'app-dashboard-navbar',
@@ -7,12 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DashboardNavbarComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private menuBuilderService: MenuBuilderService,
+  ) { }
 
+  navbar: Array<object>;
   activeSubmenu: number = -1;
   navbarVisibility = false;
 
   ngOnInit() {
+    this.navbar = this.menuBuilderService.buildNavbar()
   }
 
   resizeNavbarVisibility() {
