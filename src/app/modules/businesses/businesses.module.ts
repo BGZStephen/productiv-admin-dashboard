@@ -3,10 +3,10 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { FlashMessagesModule } from 'angular2-flash-messages';
-import { ModulesAddComponent, ModulesManageComponent } from './components/modules-components-barrel';
+import { BusinessesManageComponent, BusinessesAddComponent  } from './components/businesses-components-barrel';
 
 @NgModule({
-  declarations: [ModulesAddComponent, ModulesManageComponent],
+  declarations: [BusinessesManageComponent, BusinessesAddComponent],
   imports: [
     CommonModule,
     FormsModule,
@@ -15,4 +15,4 @@ import { ModulesAddComponent, ModulesManageComponent } from './components/module
   ],
   providers: [],
 })
-export class ModulesModule { }
+export class BusinessesModule { }

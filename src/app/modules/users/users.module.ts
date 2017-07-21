@@ -5,11 +5,12 @@ import { HttpModule } from '@angular/http';
 import { FlashMessagesModule } from 'angular2-flash-messages';
 
 // components
-import { UsersManageComponent } from './components/users-components-barrel';
+import { UsersManageComponent, UsersAddComponent } from './components/users-components-barrel';
 
 @NgModule({
   declarations: [
     UsersManageComponent,
+    UsersAddComponent,
   ],
   imports: [
     CommonModule,
