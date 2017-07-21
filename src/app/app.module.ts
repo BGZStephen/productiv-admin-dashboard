@@ -4,8 +4,9 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 // services
-import { NotificationService } from './services/helpers/notification.service';
-import { MenuBuilderService } from './services/helpers/menu-builder.service'
+import { NotificationService } from './services/notification.service';
+import { MenuBuilderService } from './services/menu-builder.service'
+import { ProductivApiService } from './services/productiv-api.service'
 
 // modules
 import { DashboardModule } from './modules/dashboard/dashboard.module';
@@ -27,7 +28,7 @@ import { AppComponent } from './app.component';
     AppRoutes,
     DashboardModule,
   ],
-  providers: [NotificationService, MenuBuilderService],
+  providers: [NotificationService, MenuBuilderService, ProductivApiService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

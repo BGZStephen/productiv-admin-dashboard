@@ -16,9 +16,6 @@ import { DashboardNavbarComponent, DashboardViewComponent, DashboardLoginCompone
 //  routes
 import { DashboardRoutes } from './dashboard.routes';
 
-// services
-import { ApiService } from './services/api.service';
-
 @NgModule({
   declarations: [
     DashboardNavbarComponent,
@@ -36,6 +33,6 @@ import { ApiService } from './services/api.service';
     AnalyticsModule,
     BusinessesModule,
   ],
-  providers: [ApiService],
+  providers: [],
 })
 export class DashboardModule { }

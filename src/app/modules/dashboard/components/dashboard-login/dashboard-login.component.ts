@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { ApiService } from '../../services/api.service';
+import { ProductivApiService } from '../../../../services/productiv-api.service';
 import { FlashMessagesService } from 'angular2-flash-messages';
-import { NotificationService } from '../../../../services/helpers/notification.service';
+import { NotificationService } from '../../../../services/notification.service';
 
 @Component({
   selector: 'app-dashboard-login',
@@ -11,7 +11,7 @@ import { NotificationService } from '../../../../services/helpers/notification.s
 export class DashboardLoginComponent implements OnInit {
 
   constructor(
-    private apiService: ApiService,
+    private apiService: ProductivApiService,
     private flashMessagesService: FlashMessagesService,
     private notificationService: NotificationService,
   ) { }
