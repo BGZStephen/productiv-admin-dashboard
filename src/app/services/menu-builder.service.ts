@@ -16,7 +16,7 @@ export class MenuBuilderService {
 
     const usersNavItem = {
       icon: 'fa-users',
-      route: '',
+      route: null,
       hasSubmenu: true,
       title: 'Users',
       submenu: [
@@ -35,7 +35,7 @@ export class MenuBuilderService {
 
     const businessesNavItem = {
       icon: 'fa-building-o',
-      route: '',
+      route: null,
       hasSubmenu: true,
       title: 'Businesses',
       submenu: [
@@ -54,7 +54,7 @@ export class MenuBuilderService {
 
     const modulesNavItem = {
       icon: 'fa-microchip',
-      route: '',
+      route: null,
       hasSubmenu: true,
       title: 'Modules',
       submenu: [

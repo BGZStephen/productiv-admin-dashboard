@@ -11,8 +11,20 @@ const DASHBOARD_ROUTES: Routes = [
     {path: '', redirectTo: 'users', pathMatch: 'full'},
     {path: 'users', children: [
       {path: '', redirectTo: 'manage', pathMatch: 'full'},
-      {path: 'manage', component: UsersManageComponent}
+      {path: 'manage', component: UsersManageComponent},
+      {path: 'add', component: UsersManageComponent}
     ]},
+    {path: 'businesses', children: [
+      {path: '', redirectTo: 'manage', pathMatch: 'full'},
+      {path: 'manage', component: UsersManageComponent},
+      {path: 'add', component: UsersManageComponent}
+    ]},
+    {path: 'modules', children: [
+      {path: '', redirectTo: 'manage', pathMatch: 'full'},
+      {path: 'manage', component: UsersManageComponent},
+      {path: 'add', component: UsersManageComponent}
+    ]},
+    {path: 'analytics', component: UsersManageComponent},
   ]},
 ];
 

@@ -5,13 +5,13 @@
     </div>
     <ul class="navbar-top-level" (window:resize)="resizeNavbarVisibility()" [ngStyle]="navbarStyle()">
       <div class="navbar-top-level-container" *ngFor="let topLevelNav of navbar; let i = index">
-        <div class="navbar-top-level-content" (click)="setActiveSubmenu(i)">
+        <div class="navbar-top-level-content" [routerLink]="topLevelNav.route" (click)="setActiveSubmenu(i)">
           <i class="fa" [ngClass]="topLevelNav.icon"></i>
           <li class="navbar-top-item">{{topLevelNav.title}}</li>
           <i class="fa fa-caret-down" *ngIf="topLevelNav.hasSubmenu"></i>
         </div>
         <ul class="navbar-second-level" [ngStyle]="submenuStyle(i)" *ngIf="topLevelNav.hasSubmenu">
-          <div class="navbar-second-level-container" *ngFor="let secondLevelNav of topLevelNav.submenu">
+          <div class="navbar-second-level-container" [routerLink]="secondLevelNav.route" *ngFor="let secondLevelNav of topLevelNav.submenu">
             <div class="navbar-second-level-content">
               <i class="fa" [ngClass]="secondLevelNav.icon"></i>
               <li class="navbar-second-item">{{secondLevelNav.title}}</li>
