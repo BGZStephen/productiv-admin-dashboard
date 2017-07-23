@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { ProductivApiService } from '../../../../services/productiv-api.service';
 import { FlashMessagesService } from 'angular2-flash-messages';
 import { NotificationService } from '../../../../services/notification.service';
@@ -14,6 +15,7 @@ export class DashboardLoginComponent implements OnInit {
     private apiService: ProductivApiService,
     private flashMessagesService: FlashMessagesService,
     private notificationService: NotificationService,
+    private router: Router,
   ) { }
 
   ngOnInit() {
@@ -22,7 +24,10 @@ export class DashboardLoginComponent implements OnInit {
   login(userObject) {
     this.apiService.login(userObject)
     .subscribe(res => {
-      this.notificationService.flashSuccess('Login successful');
+      this.notificationService.flashSuccess('Login successful', 900);
+      setTimeout(() => {
+        this.router.navigate(['/dashboard'])
+      }, 1000)
     },
     error => {
       this.notificationService.flashError('Login failed');
