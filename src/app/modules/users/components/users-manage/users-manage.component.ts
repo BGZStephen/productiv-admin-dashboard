@@ -21,7 +21,7 @@ export class UsersManageComponent implements OnInit {
   getUsers() {
     this.apiService.getUsers()
     .subscribe(res => {
-      console.log(res.json())
+      this.users = res.json();
     },
     error => {
       console.log(error)

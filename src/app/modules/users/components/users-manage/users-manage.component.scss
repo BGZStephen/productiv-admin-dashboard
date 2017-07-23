@@ -5,3 +5,42 @@
   padding: 10px;
   width: 100%;
 }
+
+.users-table-container {
+  width: 100%;
+}
+
+.users-table {
+  border-collapse: collapse;
+  width: 100%;
+  thead {
+    background: #222;
+    color: white;
+  }
+  td {
+    cursor: pointer;
+    padding: 8px 15px;
+    display: none;
+    &:nth-of-type(3) {
+      display: table-cell;
+    }
+    @media(min-width: 600px) {
+      display: table-cell;
+    }
+  }
+  @media(min-width: 600px) {
+    width: auto;
+  }
+}
+
+.users-row {
+  transition: 0.2s ease all;
+  &:nth-of-type(even) {
+    background: #ccc;
+    color: black;
+  }
+  &:hover {
+    background: #999;
+    color: white;
+  }
+}

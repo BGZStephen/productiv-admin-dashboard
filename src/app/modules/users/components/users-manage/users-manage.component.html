@@ -1,3 +1,38 @@
 <div class="main-container">
-  {{users}}
+  <div class="users-table-container">
+    <table class="users-table" *ngIf="users">
+      <thead>
+        <tr class="users-headings">
+          <td>First Name</td>
+          <td>Last Name</td>
+          <td>Email</td>
+          <td>Password</td>
+        </tr>
+      </thead>
+      <tr class="users-row" *ngFor="let user of users">
+        <td>{{user.firstName}}</td>
+        <td>{{user.lastName}}</td>
+        <td>{{user.email}}</td>
+        <td>reset password</td>
+      </tr>
+      <tr class="users-row" *ngFor="let user of users">
+        <td>{{user.firstName}}</td>
+        <td>{{user.lastName}}</td>
+        <td>{{user.email}}</td>
+        <td>reset password</td>
+      </tr>
+      <tr class="users-row" *ngFor="let user of users">
+        <td>{{user.firstName}}</td>
+        <td>{{user.lastName}}</td>
+        <td>{{user.email}}</td>
+        <td>reset password</td>
+      </tr>
+      <tr class="users-row" *ngFor="let user of users">
+        <td>{{user.firstName}}</td>
+        <td>{{user.lastName}}</td>
+        <td>{{user.email}}</td>
+        <td>reset password</td>
+      </tr>
+    </table>
+  </div>
 </div>
