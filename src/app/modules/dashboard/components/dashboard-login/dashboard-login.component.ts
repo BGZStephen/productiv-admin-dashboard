@@ -24,6 +24,7 @@ export class DashboardLoginComponent implements OnInit {
   login(userObject) {
     this.apiService.login(userObject)
     .subscribe(res => {
+      this.apiService.storeToken(res.json().token)
       this.notificationService.flashSuccess('Login successful', 900);
       setTimeout(() => {
         this.router.navigate(['/dashboard'])

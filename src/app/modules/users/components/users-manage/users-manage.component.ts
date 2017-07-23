@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ProductivApiService } from '../../../../services/productiv-api.service';
 
 @Component({
   selector: 'app-users-manage',
@@ -7,9 +8,24 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UsersManageComponent implements OnInit {
 
-  constructor() { }
+  users: Array<object>
+
+  constructor(
+    private apiService: ProductivApiService
+  ) {}
 
   ngOnInit() {
+    this.getUsers()
+  }
+
+  getUsers() {
+    this.apiService.getUsers()
+    .subscribe(res => {
+      console.log(res.json())
+    },
+    error => {
+      console.log(error)
+    })
   }
 
 }

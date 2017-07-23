@@ -17,4 +17,16 @@ export class ProductivApiService {
     return this.http.post(`${this.apiUrl}/users/authenticate`, userObject, {headers: headers});
   }
 
+  storeToken(token) {
+    localStorage.setItem('token', token)
+  }
+
+  getUsers() {
+    const headers = new Headers();
+    const token = localStorage.getItem('token')
+    headers.append('Authorization', `${environment.adminAuthToken}`);
+    headers.append('Token', `${token}`);
+    return this.http.get(`${this.apiUrl}/users`, {headers: headers});
+  }
+
 }
