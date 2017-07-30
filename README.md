@@ -1,6 +1,6 @@
-# productiv-admin-dashboard
+# productiv-dashboard
 
-Administration dashboard for the productiv platform
+Users dashboard for the productiv platform
 
 ## setup
 
@@ -8,11 +8,11 @@ Administration dashboard for the productiv platform
 
 ## Development
 
-`ng serve` then browse to http://localhost:4200. If used in conjunction with productiv-front-end run `ng serve --port=4210` and browse to http://localhost:4210
+`ng serve` then browse to http://localhost:4210.
 
 ## Production testing
 
-`ng serve --environment=production` then browse to http://localhost:4200. If used in conjunction with productiv-front-end run `ng serve --environment=production --port=4210` and browse to http://localhost:4210
+`ng serve --environment=production` then browse to http://localhost:4210.
 
 ## build
 
